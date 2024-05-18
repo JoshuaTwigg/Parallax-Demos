@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    
+
+        <div id="contain">
+            <img id="o" src="para1.png">
+            <img id="t" src="para2.png">
+        </div>
+   
+        <div id="circle"></div>
+
+        <div id="a">
+
+        </div>
+
+        <!-- <div class="cursor"></div> -->
+
+
+    <script>
+        //   const cursor = document.querySelector('.cursor');
+
+// document.addEventListener('mousemove', e => {
+//     cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")//HUGE THING. IF UR HARDWARE/GRAPHIC ACCELERATION IS OFF
+//     /// on cchomre like mine, its laggy and looks like crap. but if u turn it on its nice and smooth. doing animations like this 
+//     // is much more gpu and cpu intensive as it has to keep track of position at all times
+
+// })
+
+
+       
+        console.log("gda")
+        let circle = document.getElementById("circle")
+
+        console.log(circle.style)
+
+        window.addEventListener("scroll",()=>{
+            let scroll = window.scrollY;
+            let scrollX = window.scrollX;
+
+            console.log(scrollX)
+
+            let x = document.getElementById("o")
+            let z = document.getElementById("t")
+
+           
+           x.style.left = (-scroll * 0.1) + "px";
+        z.style.left= scroll *0.1 + "px";
+        })
+        
+
+        window.addEventListener("mousemove",(e)=>{
+            let scroll = e.pageY
+
+           
+
+            let x = e.pageX
+            let y = e.pageY
+
+            circle.style.top = (y-15) + "px"
+            circle.style.left = (x-20) + "px"
+
+            //if user moves mouse low it changes class makes it look different
+            //here a good place to add a special animation when the user clicks
+
+            //click listerner, then classlist add for animation
+
+            if(scroll > 500){
+                circle.classList.add("cursor2");
+            }
+
+            document.addEventListener("click",()=>{
+                //.addclasslsit that has cursor animation
+                // then if user clisk 2 x it will break so u 
+                // classlist.remove timeout() after 0.5 seconds
+                //so it can be readded and doesnt break
+            })
+//
+        })
+
+        // window.addEventListener("mousemove",(e)=>{
+        //     let scroll = window.scrollY
+
+        //     if(scroll > 500){
+        //         circle.classList.add("circle2");
+        //     }
+
+        //     let x = e.pageX
+        //     let y = e.pageY
+
+        //     circle.style.top = (y-15) + "px"
+        //     circle.style.left = (x-20) + "px"
+
+
+        // })
+
+
+
+
+
+
+
+
+        //seems u have to leave background portion of parallax alone as if u move it it breaks or isnt long enough.
+        // u move elments al other elemnets around it then it wokrs idk. u can also use transform to do the moving 
+        // for parallax instead of js
+    </script>
+</body>
+</html>

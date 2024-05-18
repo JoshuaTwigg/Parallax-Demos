@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    overflow-x:hidden ;
+}
+
+#img2{
+    position: absolute;
+    width:100%!important;
+    margin-right: 5000px !important;
+    bottom:0;
+    height:800px
+
+}
+
+#butt{
+    position: absolute;
+    left:10%;
+    font-size: 140px;
+    font-weight: bold;
+    color:white;
+}
+
+#img1{
+    width:100% !important;
+    height:1000px;
+   
+}
+
+div{
+    position: relative;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+}
+
+#main{
+    position: relative;
+}
+
+h1{
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 200px;
+   
+}
+
+.moveElement{
+   
+    transform: translateX(500px);
+    transition: transform 1s;
+}
+
+/* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+  
+  /* The element to apply the animation to */
+  .moveElement{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }  
+
+/*// maybe keyframes for text animate smoothly, idk about images
+

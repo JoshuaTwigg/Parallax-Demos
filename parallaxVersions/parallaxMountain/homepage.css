@@ -1,0 +1,76 @@
+
+body{
+    overflow-x: hidden;
+}
+
+
+main{
+    
+   
+    text-align: center;
+    z-index: 99;
+   
+}
+
+header{
+    background-image: url(./moun.png);
+    text-align: center;
+    background-size: 100% 100%;
+    height: 800px;
+    position: relative;
+    background-repeat: none !important;
+    
+}
+
+#parallaxHeading{
+    font-size: 140px;
+    font-weight: bold;
+    color:white;
+    top:0;
+    margin-top: 50px;
+    margin-left: 20%;
+    transition: 200ms;
+    position: absolute;
+}
+
+#trees{
+    width:100%;
+  
+    position: absolute;
+    top:151px!important;
+    transition: 700ms;
+    
+}
+
+article{
+    text-align: center;
+    height: 800px;
+    background-color: rgba(35,44,49,255);
+    margin-top: 210px;
+}
+
+.card-body{
+    background-color: rgba(35,44,49,255);
+    border:0;
+    border-width: 0px !important;
+}
+
+.card{
+    border:0px !important;
+}
+
+.cardImg{
+    width:100%;
+    border-radius: 10px;
+    height: 300px;
+   
+
+}
+
+#img2{
+  margin-top: 100px;
+}
+
+#img4{
+    margin-top: 50px;
+  }

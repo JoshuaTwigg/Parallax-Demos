@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+
+   
+
+    <div id="textContain">
+        <h1><span id="a">Para</span>llax Effect</h1>
+        <ul id="listContainer">         
+            <li id="text">parallax</li>
+            <li>Effect</li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="circle"></div>
+    </div>
+
+    <div id="container">
+        <div id="circleTwo"></div>
+    </div>
+
+    <div id="relativeContain">
+        <img id="img1" src="para1.png">
+        <img id="img2" src="para2.png">
+    </div>
+   
+  
+  
+    
+
+
+    <script>
+        console.log("w")
+
+        window.addEventListener("mousemove",(e)=>{
+                // console.log(e.clientY + "" + "x:"+ e.clientX)
+
+                let circle2 = document.getElementById("circleTwo")
+                console.log(e)
+
+                // circle2.setAttribute("style","top:" +(e.clientY) + "px; left:" +(e.clientX) + "px;") //get mouse pos // cause cirlce is absolute u can use top left etc. set those to the mouses pos
+                //or use 
+
+                circle2.style.top = e.pageY -1000 + "px";
+                circle2.style.left = e.pageX -1000 + "px";
+            })
+
+        window.addEventListener("scroll",()=>{
+            let scroll = window.scrollY;
+            console.log(scroll)
+            console.log(window)
+     
+            
+            
+            // let text2 = document.getElementById("thing")
+            // text2.style.transform = "translate3d(0px,50px,0px)";// span tag will not work with this. it doesnt have width etc
+            
+
+            let text = document.getElementById("text")
+            console.log(text.style)
+
+            let x = window.pageYOffset
+
+            text.style.transform = 'translate3d(0px,'+scroll *0.5+'px,0px)'; //DONT FORGET px' otherwise it wont work and u will rage cause u wont knw y
+            // text.style.top = scroll + "px";
+
+            let circle = document.getElementById("circle")
+            circle.style.transform =  'translate3d('+scroll *0.5+'px,0px,0px)'; 
+
+            let image = document.getElementById("img2")
+            let image2= document.getElementById("img1")
+
+            image2.style.left = scroll + "px";
+            image.style.left = scroll *0.5 + "px";
+
+            //mouse circle
+
+           
+
+           
+
+            // circle.style.transform = 'translate3d('+scroll *0.5+'px,0px,0px)'; 
+
+           
+        })
+    </script>
+</body>
+</html>
+
+<!-- black dot,  text, absolute images -->

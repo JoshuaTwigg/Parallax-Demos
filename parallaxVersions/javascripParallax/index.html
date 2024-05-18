@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    
+    <div id="main">
+        <h1 id="butt">Welcome</h1>
+        <img id="img2" src="./para2.png">
+        <img id="img1" src="./para1.png">
+    </div>
+
+    <div>
+        <h1>FAREWELL</h1>
+        <h1 id="h">
+            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+            by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble
+            that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness
+            of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and
+            easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our
+            being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain
+            circumstances and owing
+            to the claims of duty or the obligations of business it will frequently occur that pleasures have to be
+            repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of
+            selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse
+            pains."
+            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+            by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble
+            that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which
+            is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to
+            distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able
+            to do what
+            we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to
+            the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated
+            and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he
+            rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+        </h1>
+    </div>
+
+
+   <script>
+
+        let textFunc = ()=>{
+            // let text = document.getElementById("h").innerHTML = "hi";
+
+        }
+
+
+        //create a css rule, then style.add that rule. then need to increment its position somehow on each scroll
+        function image(){
+            let image = document.getElementById("img2")
+            // image.style.position = "relative";
+            // console.log(image.style + "style")//.style returns the css style i wrote ofr this element. its in dom. also in f12 its called [CSSStyleDeclaration]
+            image.classList.add('moveElement');
+            
+
+            // elementToMove.style.position = 'absolute';
+            // elementToMove.style.left = '100px';
+            // elementToMove.style.top = '50px';
+            
+        }
+
+        console.log("w")
+        window.addEventListener("scroll",()=>{
+            console.log("scrolled")
+            let scrollAmount = window.scrollY
+            let image = document.getElementById("img2")
+            let image2= document.getElementById("img1")
+
+            image2.style.bottom = scrollAmount + "px";
+            image.style.left = scrollAmount *0.5 + "px"; //*0.5 halves speed
+
+            //we are essentially using a dynamic value - scrolling ot update elements pos
+
+
+
+            //YES https://www.youtube.com/watch?v=Dxm6EwvQIl8&ab_channel=DesignCourse
+            //vid also uses same code as firewatch website. those use data-speed 5 if u check source code
+
+
+            //SEEMS IMAGE HAS TO HAVE POSITION ABSOLUTE or a position of some kind
+            // normal images dont move with this method idk why. so only this absolute rock picture with guy is absolute only it works
+
+            let scrollable = document.documentElement.scrollHeight - window.innerHeight;
+
+            // while(scrollAmount < scrollable){
+
+            // }
+        //get max
+            console.log(scrollAmount)
+
+            textFunc();
+
+            image();
+
+        })
+   </script>
+</body>
+</html>

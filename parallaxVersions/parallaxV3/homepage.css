@@ -1,0 +1,61 @@
+body{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+#textContain{
+    margin-top: 400px;
+}
+
+
+#container{
+    position: relative;
+}
+
+#circle{
+    border-radius: 50%;
+    background-color: black;
+    width:50px;
+    height:50px;
+    position: absolute;
+}
+
+#relativeContain{
+    margin-top:500px ;
+    position: relative;
+    height: 1000px;
+    width:100%;
+}
+
+#relativeContain img{
+    position: absolute;
+    width:500px;
+    height:500px;
+
+}
+
+#circleTwo{
+    margin-top:150px ;
+    margin-left: 50%;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    position: absolute;
+    background-color: rgba(74, 147, 235, 0.92);
+}
+
+#listContainer{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+}
+
+#listContainer li {
+    display: inline-block;
+}
+
+#img1{
+    width:100%;
+}
